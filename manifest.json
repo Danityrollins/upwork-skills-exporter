@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork Skills Exporter",
+  "version": "1.0",
+  "description": "Exports skills from Upwork job search results into a CSV file.",
+  "permissions": ["activeTab", "storage", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.upwork.com/nx/search/jobs/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
